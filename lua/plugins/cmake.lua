@@ -10,7 +10,7 @@ return {
   keys = {
     -- F5: Build
     { "<leader>bb", "<cmd>CMakeBuild<CR>", desc = "Build Project" },
-    { "<leader>bt", "<cmd>CMakeSelectBuildType<CR>", desc = "Select Build Type" },
+    { "<leader>bt", "<cmd>CMakeSelectBuildPreset<CR>", desc = "Select Build Type" },
     { "<leader>bc", "<cmd>CMakeSelectConfigurePreset<CR>", desc = "Select CMake Preset" },
     { "<leader>bi", "<cmd>CMakeInstall<CR>", desc = "Install Target" },
 
