@@ -32,3 +32,7 @@ vim.opt.backup = false            -- Disable backup files
 vim.opt.updatetime = 250          -- Faster completion/updates (default is 4000ms)
 vim.opt.splitright = true         -- Vertical splits open to the right
 vim.opt.splitbelow = true         -- Horizontal splits open to the bottom
+
+-- BUILD & PROJECT BASED BUILD
+vim.o.exrc = true                 -- Allow loading local config files
+vim.o.secure = true               -- Disable shell commands in those files
