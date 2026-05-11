@@ -4,22 +4,27 @@ return {
   event = { "BufReadPost", "BufNewFile" },
   cmd = { "TSUpdate", "TSInstall" },
   config = function()
-    require("nvim-treesitter.configs").setup({
-      -- A list of parser names, or "all" (the five listed parsers should always be installed)
+    -- Attempt to load the old 'configs' module
+    local status, treesitter_configs = pcall(require, "nvim-treesitter.configs")
+    
+    local settings = {
+      -- Your existing preferences
       ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "cpp" },
-
-      -- Install parsers synchronously (only applied to `ensure_installed`)
       sync_install = false,
-
-      -- Automatically install missing parsers when entering buffer
       auto_install = true,
-
       highlight = {
-        enable = true, -- MUST be true for highlighting to work
+        enable = true, 
         additional_vim_regex_highlighting = false,
       },
-      
       indent = { enable = true }, 
-    })
+    }
+
+    if status then
+      -- Compatibility mode: Use the old setup if the module exists (WSL)
+      treesitter_configs.setup(settings)
+    else
+      -- Modern mode: Use the direct setup for nvim-treesitter v1.0+ (Windows)
+      require("nvim-treesitter").setup(settings)
+    end
   end
 }

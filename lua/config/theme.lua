@@ -71,3 +71,13 @@ hl("MatchParen",            { fg = colors.yellow, bold = true, underline = true 
 hl("GitSignsAdd",    { fg = colors.green })  -- Forces your Green (#c3e88d)
 hl("GitSignsChange", { fg = colors.blue })   -- Forces your Blue (#82aaff)
 hl("GitSignsDelete", { fg = colors.red })    -- Forces your Red (#ff5370)
+
+-- 7. AUTOCOMPLETE COLORS (nvim-cmp)
+hl("Pmenu",         { bg = "#181818", fg = colors.fg }) 
+hl("PmenuSel",      { bg = colors.selection, fg = colors.green, bold = true }) 
+hl("PmenuSbar",     { bg = "#1a1a1a" })
+hl("PmenuThumb",    { bg = colors.grey })
+hl("CmpItemAbbrMatch",      { fg = colors.blue, bold = true })
+hl("CmpItemAbbrMatchFuzzy", { fg = colors.blue, bold = true })
+hl("CmpItemKind",           { fg = colors.purple })
+hl("CmpItemMenu",           { fg = colors.grey, italic = true })
