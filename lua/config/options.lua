@@ -37,7 +37,6 @@ vim.opt.splitbelow = true         -- Horizontal splits open to the bottom
 vim.o.exrc = true                 -- Allow loading local config files
 vim.o.secure = true               -- Disable shell commands in those files
 -- Ensure Neovim saves enough info for the session to be useful
-vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp" }
 
 -- Check if the system is Windows
 if vim.fn.has("win32") == 1 then
